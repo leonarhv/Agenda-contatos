@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import './style.css'
 
 export default class Main extends Component {
 
@@ -23,10 +24,11 @@ export default class Main extends Component {
     return (
         <div className="lista-contatos">
             {contatos.map(contato => (
-                <div key={`contato-${contato.id}`}>
-                    <h1>{contato.nome}</h1>
-                    <p>{contato.facebook}</p>
-                </div>
+                <article key={`contato-${contato.id}`}>
+                    <h3>{contato.nome}</h3>
+                    <p>Telefone: {contato.telefone}</p>
+                    <a href={"http://" + contato.facebook}>Facebook</a>
+                </article>
             ))}
         </div>
     )
