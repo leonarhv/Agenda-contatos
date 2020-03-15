@@ -13,13 +13,22 @@ export default class Main extends Component {
 
     loadContatos = async () => {
         const response = await api.get('/contatos');
-        console.log(response);
+        const contatos = response.data; 
+        this.setState({ contatos });
     };
 
     render() {
+    const { contatos } = this.state;
 
     return (
-        <div>aa</div>
+        <div className="lista-contatos">
+            {contatos.map(contato => (
+                <div key={`contato-${contato.id}`}>
+                    <h1>{contato.nome}</h1>
+                    <p>{contato.facebook}</p>
+                </div>
+            ))}
+        </div>
     )
 
     }
