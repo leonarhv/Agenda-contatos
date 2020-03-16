@@ -21,8 +21,11 @@ export default class AdicionaContato extends Component {
     }
 
     handleSubmit = (event) => {
-        const {nome, facebook, telefone} = this.state;
-        api.post(`/contatos?nome=${nome}&telefone=${telefone}&facebook=${facebook}`);
+        const qs = require('qs');
+        api.post('/contatos', qs.stringify(this.state)).then(response => {
+            this.setState({ nome: "", telefone: "", facebook: "" });
+            console.log(response.status);
+        });
         event.preventDefault();
     }
 
