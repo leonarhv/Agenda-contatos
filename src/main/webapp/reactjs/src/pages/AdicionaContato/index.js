@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import './style.css';
 
 export default class AdicionaContato extends Component {
     constructor(props) {
@@ -30,14 +31,18 @@ export default class AdicionaContato extends Component {
         <div className="adicionaContato">
             <h2>Adicionar novo contato</h2>
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" value={this.state.nome} onChange={this.handleChange} />
+                <label htmlFor="nome">Nome:
+                <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" value={this.state.nome} onChange={this.handleChange} />
+                </label>
 
-                <label htmlFor="telefone">Telefone:</label>
-                <input type="text" name="telefone" id="telefone" value={this.state.telefone} onChange={this.handleChange} />
+                <label htmlFor="telefone">Telefone:
+                <input type="text" name="telefone" id="telefone" placeholder="Informe seu telefone (xx) xxxx-xxxx" value={this.state.telefone} onChange={this.handleChange} />
+                </label>
 
-                <label htmlFor="facebook">Facebook:</label>
-                <input type="text" name="facebook" id="facebook" value={this.state.facebook} onChange={this.handleChange} />
+                <label htmlFor="facebook">Facebook:
+                <input type="text" name="facebook" id="facebook" placeholder="Informe o facebook do contato: facebook.com/[Pagina do contato aqui]" value={this.state.facebook} onChange={this.handleChange} />
+                </label>
+
                 <button type="submit">Adicionar</button>
             </form>
         </div>

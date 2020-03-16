@@ -1,0 +1,50 @@
+.adicionaContato {
+    margin: 20px auto;
+    max-width: 700px;
+    border: 1px solid #DDD;
+    padding: 0px 20px;
+}
+
+.adicionaContato h2 {
+    margin: 20px 0;
+    color: #0E2232;
+}
+
+.adicionaContato form {
+    display: flex;
+    flex-direction: column;
+}
+
+.adicionaContato form > * {
+    margin-bottom: 20px;
+}
+
+.adicionaContato form label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adicionaContato form label input {
+    width: 100%;
+    max-width: 550px;
+    padding: 5px;
+    border: 1px solid #294F6D;
+    border-radius: 2px;
+}
+
+.adicionaContato form button {
+    padding: 10px;
+    border: 1px solid #294F6D;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #294F6D;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.adicionaContato form button:hover {
+    cursor: pointer;
+    background-color: #294F6D;
+    color: #FFF;
+}
