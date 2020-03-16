@@ -19,9 +19,9 @@ export default class AdicionaContato extends Component {
         this.setState({ [name]: value });
     }
 
-    handleSubmit = async (event) => {
+    handleSubmit = (event) => {
         const {nome, facebook, telefone} = this.state;
-        await api.post(`/contatos?nome=${nome}&telefone=${telefone}&facebook=${facebook}`);
+        api.post(`/contatos?nome=${nome}&telefone=${telefone}&facebook=${facebook}`);
         event.preventDefault();
     }
 
