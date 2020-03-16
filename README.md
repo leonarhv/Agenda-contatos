@@ -34,27 +34,28 @@ você pode rodar o projeto seguindo os requintes passos:
 1. Execute a API pelo spring-boot.
 
     ```
-        .\mvnw spring-boot:run
+    .\mvnw spring-boot:run
     ```
 
     A **API** vai rodar na porta 8080.
 
 ### **Executanto o Frontend**
 
-1. Vá até o diretorio [reactjs] via terminal.
+1. Vá até o diretorio [reactjs](https://github.com/leonarhv/Agenda-contatos/tree/master/src/main/webapp/reactjs) via terminal.
 
     ```
-        cd src/main/webapp/reactjs
+    cd src/main/webapp/reactjs
     ```
 
 2. Execute a UI pelo Yarn ou NPM
 
     ```
-        yarn start
+    yarn start
     ```
 
     ou
 
     ```
-        npm start
+    npm start
     ```
+
