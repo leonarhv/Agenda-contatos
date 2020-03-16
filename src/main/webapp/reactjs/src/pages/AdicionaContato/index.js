@@ -31,7 +31,7 @@ export default class AdicionaContato extends Component {
             this.setState({ nome: "", telefone: "", facebook: "", redirect: true });
             console.log(response.status);
         });
-        
+
         event.preventDefault();
     }
 
@@ -44,11 +44,11 @@ export default class AdicionaContato extends Component {
                     <h2>Adicionar novo contato</h2>
                     <form onSubmit={this.handleSubmit}>
                         <label htmlFor="nome">Nome:
-                    <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" value={this.state.nome} onChange={this.handleChange} />
+                    <input type="text" name="nome" required="required" id="nome" placeholder="Insira seu nome aqui" value={this.state.nome} onChange={this.handleChange} />
                         </label>
 
                         <label htmlFor="telefone">Telefone:
-                    <input type="text" name="telefone" id="telefone" placeholder="Informe seu telefone (xx) xxxx-xxxx" value={this.state.telefone} onChange={this.handleChange} />
+                    <input type="text" name="telefone" required="required" id="telefone" placeholder="Informe seu telefone (xx) xxxx-xxxx" value={this.state.telefone} onChange={this.handleChange} />
                         </label>
 
                         <label htmlFor="facebook">Facebook:
