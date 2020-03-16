@@ -1,7 +1,6 @@
 .adicionaContato {
     margin: 20px auto;
     max-width: 700px;
-    border: 1px solid #DDD;
     padding: 0px 20px;
 }
 
@@ -13,6 +12,8 @@
 .adicionaContato form {
     display: flex;
     flex-direction: column;
+    border: 1px solid #DDD;
+    padding: 20px;
 }
 
 .adicionaContato form > * {
@@ -26,7 +27,7 @@
 
 .adicionaContato form label input {
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     padding: 5px;
     border: 1px solid #294F6D;
     border-radius: 2px;
