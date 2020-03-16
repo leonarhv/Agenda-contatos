@@ -1,0 +1,23 @@
+.menu {
+    height: 50px;
+    background-color: #A9C5DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    margin-right: 40px;
+    color: #0E2232;
+    font-weight: 700;
+}
+
+.menu a:last-child {
+    margin: 0;
+}
+
+.menu a:hover {
+    transition: all ease-in-out 0.1s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
