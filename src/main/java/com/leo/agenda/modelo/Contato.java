@@ -1,9 +1,14 @@
 package com.leo.agenda.modelo;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@Entity
+@Table(name = "contatos")
 public class Contato {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
     @NotBlank
