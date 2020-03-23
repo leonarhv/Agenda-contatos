@@ -16,7 +16,7 @@ public class ContatoController {
     private ContatoRepository contatoRepository;
 
     @PostMapping
-    public Contato create(Contato contato) {
+    public Contato create(@RequestBody Contato contato) {
         return contatoRepository.save(contato);
     }
 
@@ -35,4 +35,9 @@ public class ContatoController {
         contatoRepository.deleteById(id);
     }
 
+    @PostMapping("/{id}")
+    public Contato update(@PathVariable long id, @RequestBody Contato contato) {
+        contato.setId(id);
+        return contatoRepository.save(contato);
+    }
 }
