@@ -18,6 +18,12 @@ export default class Main extends Component {
         this.setState({ contatos });
     };
 
+    handleDelete = (id) => {
+        api.delete(`/contatos/${id}`).then(response => {
+            this.loadContatos();
+        });
+    }
+
     render() {
     const { contatos } = this.state;
 
@@ -28,6 +34,7 @@ export default class Main extends Component {
                     <h3>{contato.nome}</h3>
                     <p>Telefone: {contato.telefone}</p>
                     <a href={"http://" + contato.facebook}>Facebook</a>
+                    <button onClick={this.handleDelete.bind(this, contato.id)}>Deletar</button>
                 </article>
             ))}
         </div>

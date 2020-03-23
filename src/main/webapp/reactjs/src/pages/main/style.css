@@ -9,10 +9,35 @@
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-contatos p {
+    margin: 10px 0;
+}
+
+.lista-contatos a {
+    margin-bottom: 10px;
 }
 
 .lista-contatos article h3 {
     margin: 0;
     padding: 0;
     color: #0E2232;
+}
+
+.lista-contatos article button {
+    padding: 8px;
+    background-color: #ed4250;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.lista-contatos article button:hover {
+    background-color: #ed0013;
 }
