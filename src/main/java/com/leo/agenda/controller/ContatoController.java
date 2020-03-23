@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://192.168.0.11:3000"})
 @RequestMapping("/contatos")
 @RestController
 public class ContatoController {
