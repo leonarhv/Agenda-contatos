@@ -31,7 +31,6 @@ export default class AdicionaContato extends Component {
             "facebook": facebook
         }).then(response => {
             this.setState({ nome: "", telefone: "", facebook: "", redirect: true });
-            console.log(response.status);
         });
 
         event.preventDefault();
